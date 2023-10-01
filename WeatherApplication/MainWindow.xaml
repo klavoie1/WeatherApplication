@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Current Weather" Height="450" Width="500">
     <Grid>
         <TextBox Name="locationTextBox" HorizontalAlignment="Left" Margin="51,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Height="28" FontSize="16px"/>
         <Button Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="297,48,0,0" VerticalAlignment="Top" Height="28" Width="59" Click="enterButton_Click"/>
