@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,17 +24,24 @@ namespace WeatherApplication
         {
             public MainInfo main { get; set; }
             public WeatherInfo[] weather { get; set; }
+            public WindInfo wind { get; set; }
         }
 
         public class MainInfo
         {
             public float temp { get; set; }
+            public int humidity { get; set; }
         }
 
         public class WeatherInfo
         {
             public string description { get; set; }
-            public string icon { get; set; }
+            
+        }
+
+        public class WindInfo
+        {
+            public float wind { get; set; }
         }
 
         private async void enterButton_Click(object sender, RoutedEventArgs e)
@@ -61,10 +69,14 @@ namespace WeatherApplication
                     // Access weather information
                     float temperature = weatherData.main.temp;
                     string description = weatherData.weather[0].description;
-                    string icon = weatherData.weather[0].icon;
+                    int humidity = weatherData.main.humidity;
+                    float wind = weatherData.wind.wind;
 
                     // Update UI elements with weather information
-                    weatherInfoText.Text = $"Temperature: {temperature}°F\nDescription: {description}";
+                    weatherInfoText.Text = $"Temperature: {temperature}°F\n" +
+                                           $"Description: {description}\n" +
+                                           $"Humidity: {humidity}\n" +
+                                           $"Wind Speed: {wind}";
                 }
             }
             catch (Exception ex)
