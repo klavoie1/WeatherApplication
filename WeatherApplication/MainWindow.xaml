@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApplication"
         mc:Ignorable="d"
-        Title="Current Weather" Height="450" Width="500">
+        Title="Current Weather" Height="450" Width="450" Background="#FF8090AA">
     <Grid>
-        <TextBox Name="locationTextBox" HorizontalAlignment="Left" Margin="51,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Height="28" FontSize="16px"/>
-        <Button Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="297,48,0,0" VerticalAlignment="Top" Height="28" Width="59" Click="enterButton_Click"/>
-        <TextBlock Name="weatherInfoText" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="51,110,0,0" Width="410" Height="180" />
+        <TextBox Name="locationTextBox" HorizontalAlignment="Left" Margin="32,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="28" FontSize="16px"/>
+        <Button Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="360,48,0,0" VerticalAlignment="Top" Height="28" Width="60" Click="enterButton_Click" Background="#FF828282" Foreground="White" BorderBrush="#FF6E6969"/>
+        <TextBlock Name="weatherInfoText" HorizontalAlignment="Center" VerticalAlignment="Center" Width="228" Height="180" Foreground="White" />
     </Grid>
 </Window>
